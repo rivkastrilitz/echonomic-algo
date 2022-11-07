@@ -1,7 +1,8 @@
 from Agent import Agent
+from typing import List
 
 # check if option 1 is pareto improvement of option 2
-def isParetoImprovement(agents: list[Agent], option1: int, option2: int) -> bool:
+def isParetoImprovement(agents: List[Agent], option1: int, option2: int) -> bool:
     if option1 == option2:
         return False
     for a in agents:
@@ -12,7 +13,7 @@ def isParetoImprovement(agents: list[Agent], option1: int, option2: int) -> bool
     return True
 
 
-def isParetoOptimal(agents: list[Agent], option: int, allOption: list[int]) -> bool:
+def isParetoOptimal(agents: List[Agent], option: int, allOption: List[int]) -> bool:
     if option > len(allOption) or option < 0:
         raise IndexError("option out of range")
     for curr_option in allOption:

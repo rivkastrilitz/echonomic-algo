@@ -1,8 +1,10 @@
+
+from typing import List
 class Agent:
 
     values = []
 
-    def __init__(self, values: list[float]):
+    def __init__(self, values: List[float]):
         self.values = values
 
     def value(self, option: int) -> float:
